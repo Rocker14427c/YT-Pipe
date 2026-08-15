@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OpeningTheme" parent="Base.OpeningTheme">
+        <item name="android:windowSplashScreenBackground">@color/yt_dark_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/yt_launcher_foreground</item>
+        <item name="android:windowSplashScreenAnimationDuration">220</item>
+    </style>
+</resources>

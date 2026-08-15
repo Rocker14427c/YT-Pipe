@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <org.schabi.newpipe.views.ScrollableTabLayout
+        android:id="@+id/main_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/yt_bottom_navigation_height"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="@dimen/yt_toolbar_elevation"
+        android:minHeight="@dimen/yt_bottom_navigation_height"
+        app:tabIconTint="@color/yt_tab_tint"
+        app:tabIndicatorColor="?attr/colorAccent"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabMinWidth="0dp"
+        app:tabRippleColor="?attr/colorControlHighlight"
+        app:tabTextAppearance="@style/YouTubeBottomNavigationText"
+        app:tabTextColor="@color/yt_tab_tint"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_tab_layout" />
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ keeps the launch surface aligned with the dark design system. -->
+    <style name="Base.V21.OpeningTheme" parent="Base.V19.OpeningTheme">
+        <item name="android:navigationBarColor">@color/yt_dark_background</item>
+        <item name="android:statusBarColor">@color/yt_dark_background</item>
+    </style>
+</resources>

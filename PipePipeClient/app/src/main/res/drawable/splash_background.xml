@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/yt_red_strong" />
+    <item>
+        <vector
+            android:width="128dp"
+            android:height="128dp"
+            android:viewportWidth="108"
+            android:viewportHeight="108">
+            <path
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M42,34 L42,74 L76,54 Z" />
+        </vector>
+    </item>
+</layer-list>

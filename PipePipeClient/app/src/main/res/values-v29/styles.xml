@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Theme -->
+    <style name="Base.V29" parent="Base.V27">
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+    <style name="Base" parent="Base.V29" />
+
+    <!-- Light Theme -->
+    <style name="Base.V29.LightTheme" parent="Base.V27.LightTheme">
+        <item name="android:statusBarColor">@color/yt_light_surface</item>
+        <item name="android:navigationBarColor">@color/yt_light_surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Base.LightTheme" parent="Base.V29.LightTheme" />
+
+    <!-- Dark Theme -->
+    <style name="Base.V29.DarkTheme" parent="Base.V27.DarkTheme">
+        <item name="android:statusBarColor">@color/yt_dark_background</item>
+        <item name="android:navigationBarColor">@color/yt_dark_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Base.DarkTheme" parent="Base.V29.DarkTheme" />
+
+    <!-- Black Theme -->
+    <style name="Base.V29.BlackTheme" parent="Base.V27.BlackTheme">
+        <item name="android:statusBarColor">@color/black_background_color</item>
+        <item name="android:navigationBarColor">@color/black_background_color</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Base.BlackTheme" parent="Base.V29.BlackTheme" />
+</resources>

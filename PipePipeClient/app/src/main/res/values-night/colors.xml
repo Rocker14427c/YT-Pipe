@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="contrastColor">@color/yt_dark_text_primary</color>
+    <color name="defaultIconTint">@color/yt_dark_text_primary</color>
+    <color name="subscribed_background_color">@color/yt_dark_surface_pressed</color>
+    <color name="subscribed_text_color">@color/yt_dark_text_secondary</color>
+    <color name="show_replies_button_text_color">@color/yt_dark_link</color>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- YouTube-like design tokens. Keep UI roles here instead of repeating literals. -->
+    <color name="yt_red">#FF0033</color>
+    <color name="yt_red_strong">#FFFF0000</color>
+    <color name="yt_light_background">#FFFFFFFF</color>
+    <color name="yt_light_surface">#FFFFFFFF</color>
+    <color name="yt_light_surface_variant">#FFF2F2F2</color>
+    <color name="yt_light_surface_pressed">#FFE5E5E5</color>
+    <color name="yt_light_text_primary">#FF0F0F0F</color>
+    <color name="yt_light_text_secondary">#FF606060</color>
+    <color name="yt_light_text_disabled">#FF909090</color>
+    <color name="yt_light_divider">#FFE5E5E5</color>
+    <color name="yt_light_chip">#FFF2F2F2</color>
+    <color name="yt_light_chip_selected">#FF0F0F0F</color>
+    <color name="yt_light_link">#FF065FD4</color>
+
+    <color name="yt_dark_background">#FF0F0F0F</color>
+    <color name="yt_dark_surface">#FF212121</color>
+    <color name="yt_dark_surface_variant">#FF272727</color>
+    <color name="yt_dark_surface_pressed">#FF3F3F3F</color>
+    <color name="yt_dark_text_primary">#FFF1F1F1</color>
+    <color name="yt_dark_text_secondary">#FFAAAAAA</color>
+    <color name="yt_dark_text_disabled">#FF717171</color>
+    <color name="yt_dark_divider">#FF3F3F3F</color>
+    <color name="yt_dark_chip">#FF272727</color>
+    <color name="yt_dark_chip_selected">#FFF1F1F1</color>
+    <color name="yt_dark_link">#FF3EA6FF</color>
+
+    <color name="yt_player_overlay">#A6000000</color>
+    <color name="yt_player_overlay_soft">#66000000</color>
+    <color name="yt_duration_overlay">#E6000000</color>
+
+    <!-- Spacing and component dimensions -->
+    <dimen name="yt_toolbar_height">56dp</dimen>
+    <dimen name="yt_toolbar_elevation">2dp</dimen>
+    <dimen name="yt_bottom_navigation_height">64dp</dimen>
+    <dimen name="yt_touch_target">48dp</dimen>
+    <dimen name="yt_content_horizontal_padding">16dp</dimen>
+    <dimen name="yt_list_item_vertical_padding">12dp</dimen>
+    <dimen name="yt_chip_height">36dp</dimen>
+    <dimen name="yt_chip_radius">18dp</dimen>
+    <dimen name="yt_thumbnail_radius">8dp</dimen>
+    <dimen name="yt_card_radius">12dp</dimen>
+    <dimen name="yt_sheet_radius">18dp</dimen>
+    <dimen name="yt_section_gap">24dp</dimen>
+    <dimen name="yt_video_title_size">16sp</dimen>
+    <dimen name="yt_video_meta_size">13sp</dimen>
+    <dimen name="yt_toolbar_title_size">20sp</dimen>
+    <dimen name="yt_bottom_nav_label_size">12sp</dimen>
+
+    <style name="YouTubeToolbarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">?attr/actionColor</item>
+        <item name="android:textSize">@dimen/yt_toolbar_title_size</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="YouTubeBottomNavigationText" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">@dimen/yt_bottom_nav_label_size</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+
+    <style name="YouTubeVideoTitle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/yt_video_title_size</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+    </style>
+
+    <style name="YouTubeVideoMeta" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">@dimen/yt_video_meta_size</item>
+    </style>
+
+    <style name="YouTubeSettingsRow" parent="Preference.Material">
+        <item name="android:minHeight">64dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+</resources>

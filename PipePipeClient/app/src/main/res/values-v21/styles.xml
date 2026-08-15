@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Opening Theme -->
+    <style name="Base.V21.OpeningTheme" parent="Base.V19.OpeningTheme">
+        <item name="android:navigationBarColor">@color/yt_red_strong</item>
+        <item name="android:statusBarColor">@color/yt_red_strong</item>
+    </style>
+    <style name="Base.OpeningTheme" parent="Base.V21.OpeningTheme" />
+
+    <!-- Base Theme -->
+    <style name="Base.V21" parent="Base.V19" />
+    <style name="Base" parent="Base.V21" />
+
+    <!-- Light Theme -->
+    <style name="Base.V21.LightTheme" parent="Base.V19.LightTheme">
+        <item name="android:statusBarColor">@color/yt_light_surface</item>
+        <item name="android:navigationBarColor">@color/yt_light_surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Base.LightTheme" parent="Base.V21.LightTheme" />
+
+    <!-- Dark Theme -->
+    <style name="Base.V21.DarkTheme" parent="Base.V19.DarkTheme">
+        <item name="android:statusBarColor">@color/yt_dark_background</item>
+        <item name="android:navigationBarColor">@color/yt_dark_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Base.DarkTheme" parent="Base.V21.DarkTheme" />
+
+    <!-- Black Theme -->
+    <style name="Base.V21.BlackTheme" parent="Base.V19.BlackTheme">
+        <item name="android:statusBarColor">@color/black_background_color</item>
+        <item name="android:navigationBarColor">@color/black_background_color</item>
+    </style>
+    <style name="Base.BlackTheme" parent="Base.V21.BlackTheme" />
+</resources>
