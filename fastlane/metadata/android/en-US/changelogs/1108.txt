@@ -1,0 +1,7 @@
+Added the safe YouTube-style UI preset import profile.
+
+- Import the preset from Settings > Backup & restore > Import data.
+- Applies 86 YouTube-style presentation and playback preferences.
+- Activates Recommended, Subscriptions, and History as the bottom tabs.
+- Uses single-column phone lists, modern search suggestions, YouTube-style watch tabs, device themes, and YouTube-like playback defaults.
+- Merges settings without overwriting local history, subscriptions, playlists, downloads, cookies, or account data.
