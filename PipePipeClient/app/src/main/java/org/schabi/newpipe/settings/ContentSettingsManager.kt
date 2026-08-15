@@ -16,6 +16,7 @@ import java.util.zip.ZipOutputStream
 class ContentSettingsManager(private val fileLocator: NewPipeFileLocator) {
     companion object {
         const val TAG = "ContentSetManager"
+        const val UI_PRESET_ENTRY = "pipepipe.ui-preset"
     }
 
     /**
@@ -55,6 +56,15 @@ class ContentSettingsManager(private val fileLocator: NewPipeFileLocator) {
         return fileLocator.dbDir.exists() || fileLocator.dbDir.mkdir()
     }
 
+    /**
+     * Returns true for the safe settings-only preset format. Presets contain a marker and
+     * intentionally omit newpipe.db, so a user's subscriptions, history and playlists remain
+     * untouched when they import a visual configuration.
+     */
+    fun isUiPreset(file: StoredFileHelper): Boolean {
+        return ZipHelper.containsEntry(file, UI_PRESET_ENTRY)
+    }
+
     fun extractDb(file: StoredFileHelper): Boolean {
         val success = ZipHelper.extractFileFromZip(file, fileLocator.db.path, "newpipe.db")
         if (success) {
@@ -71,11 +81,22 @@ class ContentSettingsManager(private val fileLocator: NewPipeFileLocator) {
     }
 
     fun loadSharedPreferences(preferences: SharedPreferences) {
+        loadSharedPreferences(preferences, false)
+    }
+
+    /**
+     * Loads settings from an exported map. Full backups replace the preference store as before;
+     * a UI preset merges only the keys included in the preset and leaves account, path and
+     * service-specific values intact.
+     */
+    fun loadSharedPreferences(preferences: SharedPreferences, merge: Boolean) {
         try {
             val preferenceEditor = preferences.edit()
+            if (!merge) {
+                preferenceEditor.clear()
+            }
 
             ObjectInputStream(FileInputStream(fileLocator.settings)).use { input ->
-                preferenceEditor.clear()
                 @Suppress("UNCHECKED_CAST")
                 val entries = input.readObject() as Map<String, *>
                 for ((key, value) in entries) {

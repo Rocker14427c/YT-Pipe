@@ -160,16 +160,22 @@ public class BackupSettingsFragment extends BasePreferenceFragment {
         }
 
         try {
+            final boolean uiPreset = manager.isUiPreset(file);
+
+            // A UI preset deliberately has no database entry. Never replace a user's history,
+            // subscriptions or playlists just to apply the YouTube-style presentation settings.
             if (!manager.ensureDbDirectoryExists()) {
                 throw new IOException("Could not create databases dir");
             }
 
-            if (!manager.extractDb(file)) {
-                Toast.makeText(getContext(), R.string.could_not_import_all_files, Toast.LENGTH_LONG)
-                        .show();
+            if (!uiPreset) {
+                if (!manager.extractDb(file)) {
+                    Toast.makeText(getContext(), R.string.could_not_import_all_files, Toast.LENGTH_LONG)
+                            .show();
+                }
             }
 
-            // if settings file exist, ask if it should be imported.
+            // If a settings file exists, ask if it should be imported.
             if (manager.extractSettings(file)) {
                 final AlertDialog.Builder alert = new AlertDialog.Builder(requireContext());
                 alert.setTitle(R.string.import_settings);
@@ -182,7 +188,7 @@ public class BackupSettingsFragment extends BasePreferenceFragment {
                     dialog.dismiss();
                     SharedPreferences sharedPreferences = PreferenceManager
                             .getDefaultSharedPreferences(requireContext());
-                    manager.loadSharedPreferences(sharedPreferences);
+                    manager.loadSharedPreferences(sharedPreferences, uiPreset);
                     finishImport(importDataUri);
                 });
                 alert.show();

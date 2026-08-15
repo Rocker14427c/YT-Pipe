@@ -112,4 +112,24 @@ public final class ZipHelper {
             return false;
         }
     }
+
+    /**
+     * Checks whether a named entry exists without extracting or mutating the archive.
+     * This is used by settings-only presets so importing a UI preset never overwrites
+     * the user's local database.
+     */
+    public static boolean containsEntry(final StoredFileHelper file, final String name) {
+        try (ZipInputStream inZip = new ZipInputStream(new BufferedInputStream(
+                new SharpInputStream(file.getStream())))) {
+            ZipEntry entry;
+            while ((entry = inZip.getNextEntry()) != null) {
+                if (entry.getName().equals(name)) {
+                    return true;
+                }
+            }
+        } catch (final IOException ioe) {
+            return false;
+        }
+        return false;
+    }
 }
