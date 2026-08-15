@@ -1,0 +1,7 @@
+Modernized the PipePipe presentation layer with a YouTube-style design system.
+
+- Added neutral light, dark, black, and device themes.
+- Enabled modern bottom navigation while preserving the existing tab-position preference.
+- Refined feed, search, filter, watch, channel, playlist, comments, downloads, queue, and settings surfaces.
+- Updated player controls, seek progress, splash screen, launcher icon, and notification icon.
+- Preserved extraction, playback, downloads, playlists, history, subscriptions, SponsorBlock, Return YouTube Dislike, PiP, and background playback.
